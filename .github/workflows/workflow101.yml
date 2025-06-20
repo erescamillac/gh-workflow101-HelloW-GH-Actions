@@ -1,8 +1,8 @@
 # Workflow's name
 name: Hello World Workflow
 
-# El evento que dispara el workflow es 'push'
-on: [push]
+# Los eventos que disparan el workflow son 'push' y 'pull_request'
+on: [push, pull_request]
 
 jobs:
   hola:
