@@ -12,3 +12,9 @@ jobs:
     steps:
       - name: Hola Mundo
         run: echo "Hola, mundo desde GitHub Actions (eec)!"
+  
+  other-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: LS listar dirs y archivos
+        run: ls -al
