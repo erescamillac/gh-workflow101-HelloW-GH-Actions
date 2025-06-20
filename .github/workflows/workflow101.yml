@@ -24,6 +24,9 @@ jobs:
   
   other-job:
     runs-on: ubuntu-latest
+    # Establecer relación de dependencia con el job [hola]
+    # Esto significa que este job ('other-job') se ejecutará SOLO DESPUÉS de que el job [hola] haya finalizado correctamente
+    needs: [hola]
     steps:
       - name: LS listar dirs y archivos
         run: ls -al
