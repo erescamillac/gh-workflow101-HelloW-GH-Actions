@@ -12,6 +12,15 @@ jobs:
     steps:
       - name: Hola Mundo
         run: echo "Hola, mundo desde GitHub Actions (eec)!"
+
+      - name: touch file (crear archivo)
+        run: touch hola.txt
+
+      - name: Set text to the file
+        run: echo "Hola mundo, by EEC." >> hola.txt
+
+      - name: Read file content
+        run: cat hola.txt
   
   other-job:
     runs-on: ubuntu-latest
