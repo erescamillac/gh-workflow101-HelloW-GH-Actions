@@ -1,0 +1,14 @@
+# Workflow's name
+name: Hello World Workflow
+
+# El evento que dispara el workflow es 'push'
+on: [push]
+
+jobs:
+  hola:
+    # Especificar el 'runner' (VM: Vitual Machine) donde se ejecutará el job [hola]
+    runs-on: ubuntu-latest
+    # Definir los pasos que se ejecutarán en el job [hola]
+    steps:
+      - name: Hola Mundo
+        run: echo "Hola, mundo desde GitHub Actions (eec)!"
