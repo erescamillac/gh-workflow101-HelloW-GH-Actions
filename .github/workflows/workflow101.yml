@@ -40,5 +40,7 @@ jobs:
     # Esto significa que este job ('other-job') se ejecutará SOLO DESPUÉS de que el job [hola] haya finalizado correctamente
     needs: [hola]
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4.1.7
       - name: LS listar dirs y archivos
         run: ls -al
