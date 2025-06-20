@@ -2,7 +2,19 @@
 name: Hello World Workflow
 
 # Los eventos que disparan el workflow son 'push' y 'pull_request'
-on: [push, pull_request]
+# Utilizar activity-types y directivas para especificar con mayor detalle 
+# cuándo se debe ejecutar el workflow
+on:
+  push:
+    # Utilizar la directiva 'branches' para que el workflow SOLO se ejecute
+    # cuando se haga un 'push' a la rama 'main'
+    branches:
+      - main
+  
+  pull_request:
+    # El workflow se ejecutará cuando se cree un pull request hacia la rama 'main'
+    branches:
+      - main
 
 jobs:
   hola:
